@@ -1,3 +1,4 @@
 .env
 fetch_and_insert.log
 BestoPythonVisible.py
+.gitignore
