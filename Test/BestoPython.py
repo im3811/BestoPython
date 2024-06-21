@@ -161,7 +161,7 @@ def periodic_task(interval, data_types):
     thread.daemon = True
     thread.start()
 
-periodic_task(3600, ['products', 'offers', 'orders'])  # Adjust interval as needed
+periodic_task(5, ['products', 'offers', 'orders'])  # Adjust interval as needed
 
 # Main loop to keep the script running
 while True:
