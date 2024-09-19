@@ -16,17 +16,17 @@ logging.basicConfig(
 )
 
 # Log environment variables for debugging
-logging.debug("DB_NAME: %s", os.getenv('DB_NAME'))
-logging.debug("DB_USER: %s", os.getenv('DB_USER'))
-logging.debug("DB_PASSWORD: %s", os.getenv('DB_PASSWORD'))
-logging.debug("DB_HOST: %s", os.getenv('DB_HOST'))
-logging.debug("DB_PORT: %s", os.getenv('DB_PORT'))
-logging.debug("API_BASE_URL: %s", os.getenv('API_BASE_URL'))
-logging.debug("BEARER_TOKEN: %s", os.getenv('BEARER_TOKEN'))
-logging.debug("API_PRODUCTS_ENDPOINT: %s", os.getenv('API_PRODUCTS_ENDPOINT'))
-logging.debug("API_OFFERS_ENDPOINT: %s", os.getenv('API_OFFERS_ENDPOINT'))
-logging.debug("API_ORDERS_ENDPOINT: %s", os.getenv('API_ORDERS_ENDPOINT'))
-logging.debug("ORG_ID: %s", os.getenv('ORG_ID'))
+# logging.debug("DB_NAME: %s", os.getenv('DB_NAME'))
+# logging.debug("DB_USER: %s", os.getenv('DB_USER'))
+# logging.debug("DB_PASSWORD: %s", os.getenv('DB_PASSWORD'))
+# logging.debug("DB_HOST: %s", os.getenv('DB_HOST'))
+# logging.debug("DB_PORT: %s", os.getenv('DB_PORT'))
+# logging.debug("API_BASE_URL: %s", os.getenv('API_BASE_URL'))
+# logging.debug("BEARER_TOKEN: %s", os.getenv('BEARER_TOKEN'))
+# logging.debug("API_PRODUCTS_ENDPOINT: %s", os.getenv('API_PRODUCTS_ENDPOINT'))
+# logging.debug("API_OFFERS_ENDPOINT: %s", os.getenv('API_OFFERS_ENDPOINT'))
+# logging.debug("API_ORDERS_ENDPOINT: %s", os.getenv('API_ORDERS_ENDPOINT'))
+# logging.debug("ORG_ID: %s", os.getenv('ORG_ID'))
 
 def fetch_and_sync_data(data_type):
     base_urls = {
