@@ -23,14 +23,18 @@ logging.debug("DB_HOST: %s", os.getenv('DB_HOST'))
 logging.debug("DB_PORT: %s", os.getenv('DB_PORT'))
 logging.debug("API_BASE_URL: %s", os.getenv('API_BASE_URL'))
 logging.debug("BEARER_TOKEN: %s", os.getenv('BEARER_TOKEN'))
+logging.debug("API_PRODUCTS_ENDPOINT: %s", os.getenv('API_PRODUCTS_ENDPOINT'))
+logging.debug("API_OFFERS_ENDPOINT: %s", os.getenv('API_OFFERS_ENDPOINT'))
+logging.debug("API_ORDERS_ENDPOINT: %s", os.getenv('API_ORDERS_ENDPOINT'))
+logging.debug("ORG_ID: %s", os.getenv('ORG_ID'))
 
 def fetch_and_sync_data(data_type):
     base_urls = {
-        'products': f"{os.getenv('API_BASE_URL')}/api/get/products/ea6c09e9-f387-4e10-ae58-019708e3fc16",
-        'offers': f"{os.getenv('API_BASE_URL')}/api/get/offers/ea6c09e9-f387-4e10-ae58-019708e3fc16",
-        'orders': f"{os.getenv('API_BASE_URL')}/api/get/orders/ea6c09e9-f387-4e10-ae58-019708e3fc16"
-    }
-    org_id = '51412ef9-a614-4116-85e6-3ac0be8cd6f5'
+    'products': f"{os.getenv('API_BASE_URL')}{os.getenv('API_PRODUCTS_ENDPOINT')}",
+    'offers': f"{os.getenv('API_BASE_URL')}{os.getenv('API_OFFERS_ENDPOINT')}",
+    'orders': f"{os.getenv('API_BASE_URL')}{os.getenv('API_ORDERS_ENDPOINT')}"
+}
+    org_id = os.getenv('ORG_ID')
     page = 1
     headers = {'Authorization': f"Bearer {os.getenv('BEARER_TOKEN')}"}
     all_data_ids = set()
